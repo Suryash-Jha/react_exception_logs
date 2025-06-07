@@ -38,7 +38,7 @@ const ExceptionLogsTable = () => {
                 (key) => params[key] === '' && delete params[key],
             );
 
-            const response = await axios.get('http://localhost:3001/api/exception-logs', { params });
+            const response = await axios.get('https://jira-backend-7e3x.onrender.com/api/exception-logs', { params });
 
             setLogs(response.data.data);
             setTotal(response.data.total);
